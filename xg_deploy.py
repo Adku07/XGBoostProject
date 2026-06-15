@@ -161,9 +161,8 @@ Model: XGBoost {BRAND}
 # =========================
 # DB
 # =========================
-engine = create_engine(
-    "mysql+pymysql://data_team_read_only:NajanTeuLeuwihTeuKurang@103.129.149.125:1453/data_team"
-)
+db_url = st.secrets["DB_URL"]
+engine = create_engine(db_url)
 
 # =========================
 # PREPROCESS
